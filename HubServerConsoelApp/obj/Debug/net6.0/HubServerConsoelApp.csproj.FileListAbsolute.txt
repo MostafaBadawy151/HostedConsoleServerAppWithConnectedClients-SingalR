@@ -1,0 +1,15 @@
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.csproj.AssemblyReference.cache
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.GeneratedMSBuildEditorConfig.editorconfig
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.AssemblyInfoInputs.cache
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.AssemblyInfo.cs
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.csproj.CoreCompileInputs.cache
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\bin\Debug\net6.0\HubServerConsoelApp.exe
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\bin\Debug\net6.0\HubServerConsoelApp.deps.json
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\bin\Debug\net6.0\HubServerConsoelApp.runtimeconfig.json
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\bin\Debug\net6.0\HubServerConsoelApp.dll
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\bin\Debug\net6.0\HubServerConsoelApp.pdb
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.dll
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\refint\HubServerConsoelApp.dll
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.pdb
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\HubServerConsoelApp.genruntimeconfig.cache
+G:\SignalR\New folder\HubServerConsoelApp\HubServerConsoelApp\obj\Debug\net6.0\ref\HubServerConsoelApp.dll

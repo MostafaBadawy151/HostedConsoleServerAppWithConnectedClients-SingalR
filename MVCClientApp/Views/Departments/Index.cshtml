@@ -1,0 +1,100 @@
+﻿@model IEnumerable<MVCClientApp.Models.Department>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table" id="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Name)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+@section scripts {
+	<script src="~/microsoft/signalr/dist/browser/signalr.min.js"></script>
+	<script src="~/microsoft/signalr/dist/browser/signalr.js"></script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const hubConnection = new signalR.HubConnectionBuilder()
+                .withUrl("http://localhost:5000/chathub")
+                .build();
+
+            hubConnection.start().catch(err => console.error(err.toString()));
+
+            // Handle receiving a department from the hub
+            hubConnection.on("CreateDepartment", function (department) {
+
+                const table = document.getElementById("table");
+                var newRow = document.createElement("tr");
+                var nameCell = document.createElement("td");
+                nameCell.textContent = department.name;
+                newRow.appendChild(nameCell);
+
+                var linksCell = document.createElement("td");
+                // Edit link
+                var editLink = document.createElement("a");
+                editLink.href = "#"; // Replace with the actual edit link
+                editLink.textContent = "Edit";
+                linksCell.appendChild(editLink);
+
+                var detailsLink = document.createElement("a");
+                detailsLink.href = "#"; // Replace with the actual details link
+                detailsLink.textContent = "Details";
+                linksCell.appendChild(detailsLink);
+                
+
+                // Delete link
+                var deleteLink = document.createElement("a");
+                deleteLink.href = "#"; // Replace with the actual delete link
+                deleteLink.textContent = "Delete";
+                linksCell.appendChild(deleteLink);
+
+                newRow.appendChild(linksCell);
+                table.appendChild(newRow);
+            });
+            //<td>
+            //    <a href="/Departments/Edit/36" > Edit < /a> |
+            //        < a href = "/Departments/Details/36" > Details < /a> |
+            //            < a href = "/Departments/Delete/36" > Delete < /a>
+            // < /td>
+
+            // Handle form submission
+            //const createDepartmentForm = document.getElementById("createDepartmentForm");
+            //createDepartmentForm.addEventListener("submit", function (event) {
+            //    event.preventDefault();
+            //    const departmentName = document.getElementById("departmentName").value;
+
+                // Invoke the CreateDepartment method on the server
+                //hubConnection.invoke("CreateDepartment", departmentName)
+                //    .catch(err => console.error(err.toString()));
+
+                // Clear the input field
+                //document.getElementById("departmentName").value = "";
+            //});
+        });
+    </script>
+    }
